@@ -97,6 +97,9 @@ class Scope(object):
         self._contexts = {}
         self._extras = {}
 
+        self.clear_breadcrumbs()
+
+    def clear_breadcrumbs(self):
         self._breadcrumbs = deque()
 
     def add_event_processor(self, func):
